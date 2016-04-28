@@ -157,11 +157,6 @@ autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 " ==============Tagbar setting end==============
 
 
-" ==============vim powerline setting begin==============
-let g:Powerline_symbols='unicode'
-" ==============vim powerline setting end==============
-
-
 " ==============vim airline setting begin==============
 let g:airline_powerline_fonts = 1   
 " open buf status line 
