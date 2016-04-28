@@ -77,11 +77,15 @@ colorscheme solarized
 
 ### 5. 美化状态栏
 
-插件：Lokaltog/vim-powerline
+插件：vim-airline/vim-airline
+
+需要注意的是，使用这个插件的时候需要安装powerline fonts，并且设置vimrc中的guifonts为某个powerline font
     
+因为vim airline自带buffer管理，所以可以将多文档编辑插件卸载
+
 ### 6. 多文档编辑
 
-插件：fholgado/minibufexpl.vim
+~~插件：fholgado/minibufexpl.vim~~
 
 ### 7. 括号匹配高亮
 
