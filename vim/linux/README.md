@@ -75,6 +75,8 @@ colorscheme solarized
 
 安装：使用Vundle，Plugin 'majutsushi/tagbar'，然后:PluginInstall
 
+PS: linux need ctags. (`sudo apt-get install ctags`)
+
 ### 5. 美化状态栏
 
 插件：vim-airline/vim-airline
