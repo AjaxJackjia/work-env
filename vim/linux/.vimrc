@@ -124,7 +124,8 @@ endif
 " =================fullscreen setting================
 " use third-party tool 'wmctrl' to implement fullscreen(sudo apt-get install wmctrl)
 fun! ToggleFullscreen() 
-    call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")
+    "call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")  " fullscreen
+    call system("wmctrl -ir " . v:windowid . " -b add,maximized_vert,maximized_horz")   " max window 
 endf
 
 " F11 shortcut for fullscreen
