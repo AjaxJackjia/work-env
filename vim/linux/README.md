@@ -93,9 +93,13 @@ PS: linux need ctags. (`sudo apt-get install ctags`)
 
 插件：luochen1990/rainbow
 
-### 8. 自动补全：YCM， TODO
+### 8. 自动补全：YCM
 
-http://www.cnblogs.com/zhongcq/p/3630047.html
+插件：Valloric/YouCompleteMe
+
+按照doc下面的ubuntu安装方式进行安装，最后需要在vimrc中配置complie flags，即
+
+`let g:ycm_global_ycm_extra_conf = '/home/jackjia/.ycm_extra_conf_customized.py'`
 
 ### 9. 宏定义补全：TODO
 
