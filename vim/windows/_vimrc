@@ -15,9 +15,10 @@ Plugin 'VundleVim/Vundle.vim'
 " tree list view 
 Plugin 'scrooloose/nerdtree'
 " tag bar view 
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 " beautiful status line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " color scheme 
 Plugin 'altercation/vim-colors-solarized'
 " highlight brackets
@@ -63,7 +64,8 @@ set cursorline
 set hlsearch
 " set font
 "set guifont=YaHei_Consolas_Hybrid:h11.5
-set guifont=Ubuntu_Mono_derivative_Powerlin:h12:cANSI
+"set guifont=Ubuntu_Mono_derivative_Powerlin:h12:cANSI
+set guifont=Fira_Mono_Medium_for_Powerline:h12
 "set guifont=*
 
 " set no wrap
@@ -140,17 +142,19 @@ autocmd bufenter * if (winnr("$") == 1 && exists("t:NERDTreeBufName") && bufwinn
 
 
 " ==============Tagbar setting begin==============
-let g:tagbar_ctags_bin='ctags'
-let g:tagbar_width=30
+"let g:tagbar_ctags_bin='ctags'
+"let g:tagbar_width=30
 " Tagbar shortcut
-map <leader>t :Tagbar<CR>
+"map <leader>t :Tagbar<CR>
 " filter c/c++ files
-autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
+"autocmd BufReadPost *.cpp,*.c,*.h,*.hpp,*.cc,*.cxx call tagbar#autoopen()
 " ==============Tagbar setting end==============
 
 
 " ==============vim airline setting begin==============
 let g:airline_powerline_fonts = 1   
+" airline theme
+let g:airline_theme = 'molokai'
 " open buf status line 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
