@@ -29,8 +29,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Raimondi/delimitMate'
 " automatic alignment
 Plugin 'godlygeek/tabular'
-" static code analysis
-"Plugin 'scrooloose/syntastic'
 " YouCompleteMe
 "Plugin 'Valloric/YouCompleteMe' 
 
@@ -63,15 +61,18 @@ set cursorline
 " highlight search result
 set hlsearch
 " set font
-"set guifont=YaHei_Consolas_Hybrid:h11.5
-"set guifont=Ubuntu_Mono_derivative_Powerlin:h12:cANSI
-set guifont=Fira_Mono_Medium_for_Powerline:h12
+"set guifont=YaHei_Consolas_Hybrid:h11.5:cANSI
+"set guifont=Ubuntu_Mono_derivative_Powerlin:h13:cANSI
+"set guifont=Fira_Mono_Medium_for_Powerline:h13:cANSI
+"set guifont=Consolas_for_Powerline_FixedD:h13:cANSI
+set guifont=Sauce_Code_Powerline:h13:cANSI
 "set guifont=*
 
 " set no wrap
 set nowrap
 " expand tab to space
 set expandtab
+set smarttab
 " tab is 4 space when typing
 set tabstop=4
 " format tab is 4 space 
@@ -80,6 +81,7 @@ set shiftwidth=4
 set softtabstop=4
 " adopt different language to indent
 filetype indent on
+set smartindent
 " enable syntax highlight function
 syntax enable
 " allow specific syntax color scheme to change defult scheme
@@ -87,6 +89,15 @@ syntax on
 " set encoding
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set fileencoding=utf-8
+set termencoding=utf-8
+set encoding=utf-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+language message zh_CN.UTF-8
+
+set ambiwidth=double
+" backspace indent
+set backspace=indent
 
 " vim leader setting
 let mapleader   = ","
@@ -120,8 +131,8 @@ if has('gui_running')
     set guioptions-=B
     set guioptions+=c
     " disable menu bar and tool bar
-    set guioptions-=m
-    set guioptions-=T
+    "set guioptions-=m
+    "set guioptions-=T
 endif
 
 " =================max window setting================  
@@ -152,9 +163,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("t:NERDTreeBufName") && bufwinn
 
 
 " ==============vim airline setting begin==============
-let g:airline_powerline_fonts = 1   
-" airline theme
-let g:airline_theme = 'molokai'
+let g:airline_theme="molokai" 
+let g:airline_powerline_fonts = 1
+
 " open buf status line 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -166,7 +177,7 @@ nnoremap <C-Tab>    : bn<CR>
 " move to previous buffer
 nnoremap <C-S-Tab>  : bp<CR>
 " close the current buffer and move to the previous one
-nnoremap <C-A-w>    : bp <BAR> bd #<CR>
+nnoremap <leader>w   : bp <BAR> bd #<CR>
 " ==============vim airline setting end==============
 
 
