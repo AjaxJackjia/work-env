@@ -44,8 +44,7 @@ set autoread
 " no backup
 set nobackup
 " turn on real-time search 
-set incsearch
-" ignorecase when search
+set incsearch " ignorecase when search
 set ignorecase
 " vim command line mode completion
 set wildmenu
@@ -61,11 +60,8 @@ set cursorline
 " highlight search result
 set hlsearch
 " set font
-"set guifont=YaHei_Consolas_Hybrid:h11.5:cANSI
-"set guifont=Ubuntu_Mono_derivative_Powerlin:h13:cANSI
-"set guifont=Fira_Mono_Medium_for_Powerline:h13:cANSI
-"set guifont=Consolas_for_Powerline_FixedD:h13:cANSI
-set guifont=Sauce_Code_Powerline:h13:cANSI
+set guifont=Powerline_Consolas:h13:cANSI
+set guifontwide=YaHei_Consolas_Hybrid:h13:cANSI
 "set guifont=*
 
 " set no wrap
